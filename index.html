@@ -1,177 +1,369 @@
 ﻿<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>听松阁H5音乐播放器</title>
-<style type="text/css">
-.wrapper{ margin:0px auto; padding:20px; border:1px solid #CCC; background:#333; width:980px; font-size:12px;}
-</style>
-<link rel="stylesheet" href="css/zzsc.css" type="text/css" />
-<link rel="shortcut icon" type="image/x-icon" href="img/an.ico"/>
-		<style type="text/css">
-			/*样式初始化*/
-			* {
-				margin: 0;
-				padding: 0;
-				list-style: none;
-			}
-			/*去除横向滚动条*/
-			body {
-				overflow-x: hidden;
-				background-color: 000;
-			}
-			/*将div铺满整个窗口*/
-			.box {
-				height: 100vh;
-				min-height: 520px;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				flex-direction: column;
-background-color: 000;
-			}
-			/*设置大ul的大小及定位*/
-			.content {
-				position: relative;
-				width: 100%;
-				height: 100%;
-background-color: 000;
-			}
-			/*设置大li样式*/
-			.content li {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 514px;
-			}
-			/*将第一张图片后的图片隐藏*/
-			#li1~li{display: none;}
-			/*设置大li背景图片*/
-			#li1 {background-image: url(https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/bg01.jpg);}
-			#li2 {background-image: url(https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/bg02.jpg);}
-			#li3 {background-image: url(https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/bg03.jpg);}
-			#li4 {background-image: url(https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/bg04.jpg);}
-			#li5 {background-image: url(https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/bg05.jpg);}
-			#li6 {background-image: url(https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/bg06.jpg);}
-			#li7 {background-image: url(https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/bg07.jpg);}
-			#li8 {background-image: url(https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/bg08.jpg);}
-			#li9 {background-image: url(https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/bg09.jpg);}
-			/*点击a标签,切换大图片*/
-			#li1:target,
-			#li2:target,
-			#li3:target,
-			#li4:target,
-			#li5:target,
-			#li6:target,
-			#li7:target,
-			#li8:target,
-			#li9:target{
-				display: block;
-			}
-			
-			
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="枕边听松语，槛外看潮生。">
+    <meta name="keywords" content="BY, BY Blog, 听松阁, blog.4y.gs, 美文, 古典诗词">
+    <meta name="theme-color" content="#000000">
+    
+    <title>听松阁精品音乐</title>
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://code.aliyun.com/free163/publiclib/raw/08265923287e8067a337694679fca2c0344126f2/blog.4y.gs/img/favicon.ico">
+
+    <!-- Safari Webpage Icon    by-BY -->
+    <link rel="apple-touch-icon" href="./images/appleutf8/apple-touch-icon.png">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="./images/appleutf8/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./images/appleutf8/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="./images/appleutf8/syntax.css">
+
+    <link href="./images/appleutf8/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+   <link rel="stylesheet" href="./images/appleutf8/main.css">
+
+<link rel="stylesheet" href="./images/appleutf8/list/bootstrap.min.css"> 
+<link rel="stylesheet" href="./images/appleutf8/list/main.css"> 
+<link rel="stylesheet" href="./images/appleutf8/list/font-awesome.min.css">
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+
+
+<div style="position:absolute; width:100%; height:100%; z-index:2; left: 0px; top: 0px;backgroud-color:000;"> 
+	
+
+    <!-- Page Header -->
+<header class="site-header"> 
+	<nav class="navbar navbar-expand-lg navbar-light bg-transparent"> 
+		<a class="navbar-brand" href="/">听松阁精品音乐分享</a> 
+		<div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+			<ul class="navbar-nav ml-auto"> 
+				<li class="nav-item active"> <a class="nav-link" href="http://free163.com" target="_blank">Home </a> </li> 
+				<li class="nav-item active"><a class="nav-link" href="http://free163.com" target="_blank">Link</a> </li> 
+       </ul>
+      </div>
+     </nav>
+   </header>
+
+
+<div style="position:absolute; width:100%; height:100%; z-index:3;  backgroud-color:000;"> 
+
+
+
+<!-- 这里是相册列表 ---->
+
+<div class="container"> 
+ <div class="wrapper"> 
+ 	<div class="home py-4 py-md-5"> 
+ 		<div class="row"> 
+ 			
+ 			
+ 			<div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/china.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/china.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《国语流行简选》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a>
+ 			</div> 
+ 			<div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/china1.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/china1.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《国语流行精选》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a> 
+ 			</div> 
+ 			<div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/kong.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/kong.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《空灵轻音乐》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a>
+ 			</div> 
+ 			
+ 			
+ 			
+ 			<div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/korea.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/korea.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《韩流音乐精选》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a> 
+ 			</div> 
+ 			<div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/usa.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/usa.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《欧美音乐精选》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a> 
+ 			</div>
+ 			<div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/japan.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/japan.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《日本音乐精选》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a> 
+ 			</div>
+ 			
+ 			
+ 			
+
+       <div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/thailand.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/thailand.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《泰国音乐精选》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a> 
+ 			</div>
+		<div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/india.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/india.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《印度歌曲精选》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a> 
+ 			</div>
+		<div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/weimei.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/weimei.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《唯美纯音乐》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a> 
+ 			</div>
 		
-		</style>
-<noscript></head></noscript>
+		
 
-	<body bgcolor="#000000">
-		<div class="box">
-			<ul class="content">
-				<li id="li1"></li>
-				<li id="li2"></li>
-				<li id="li3"></li>
-				<li id="li4"></li>
-				<li id="li5"></li>
-				<li id="li6"></li>
-				<li id="li7"></li>
-				<li id="li8"></li>
-				<li id="li9"></li>
-			</ul>
-			<ul class="conlist" style="position:absolute; width:638px; height:115px; z-index:1; left: 1100px; top: 515px;backgroud-color:000;">
-				<a href="#li1" class="a1"><img src="https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/btn01.jpg" width="20" height="8" border="0" alt=""></a>
-				<a href="#li2" class="a2"><img src="https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/btn02.jpg" width="20" height="8" border="0" alt=""></a>
-				<a href="#li3" class="a3"><img src="https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/btn03.jpg" width="20" height="8" border="0" alt=""></a>
-				<a href="#li4" class="a4"><img src="https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/btn04.jpg" width="20" height="8" border="0" alt=""></a>
-				<a href="#li5" class="a5"><img src="hhttps://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/btn05.jpg" width="20" height="8" border="0" alt=""></a>
-				<a href="#li6" class="a6"><img src="https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/btn06.jpg" width="20" height="8" border="0" alt=""></a>
-				<a href="#li7" class="a7"><img src="https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/btn07.jpg" width="20" height="8" border="0" alt=""></a>
-				<a href="#li8" class="a8"><img src="https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/btn08.jpg" width="20" height="8" border="0" alt=""></a>
-				<a href="#li9" class="a9"><img src="https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/img/btn09.jpg" width="20" height="8" border="0" alt=""></a>
-			</ul>
-		</div>
+       <div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/zhiyu.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/zhiyu.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《治愈系放空舒缓音乐》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a> 
+ 			</div>
+		<div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/ziran.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/ziran.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《大自然之声》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a> 
+ 			</div>
+		<div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/denglj.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/denglj.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《邓丽君1000首》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a> 
+ 			</div>
 
-<!-- 代码 开始 -->
-<div class="fish" style="position:absolute; width:280px; height:175px; z-index:1; left: 139px; top: 50px;backgroud-color:000;">
-<img src="https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/images/fish.gif" width="280" height="175" border="0" alt="">
-</div>
-<div class="fish" style="position:absolute; width:280px; height:175px; z-index:1; left: 839px; top: 248px;backgroud-color:000;">
-<img src="https://cdn.jsdelivr.net/gh/kylehao/out_h5music@v1.0/h5img/images/fish.gif" width="280" height="175" border="0" alt="">
-</div>
+
+       <div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/cn2324.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/cn2324.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《国语音乐2324首》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a> 
+ 			</div>
+		<div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/usa380.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/usa380.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《欧美音乐380首》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a> 
+ 			</div>
+		<div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/gufeng.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/gufeng.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《古风流行精选》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a> 
+ 			</div>
 
 
-<div class="wrapper" style="position:absolute; width:1306px; height:40px; z-index:1; left: 0px; top: 538px;backgroud-color:000;">
-<div id="player"></div>
-<div class="player">
-	<div class="player-l bg"></div>
-	<div class="player-block bg">
-		<div class="playlist">
-			<span><p class="bg"></p>列表</span>
-			<select class="selectobj" id="list"></select>
-			<div class="select"></div>
-		</div>
-		<div class="seprator bg"></div>
-		<div class="controls">
-			<a href="#" class="pre mode-bg" title="上一曲"></a>
-			<a href="#" class="play mode-bg" title="播放" style="display:none"></a>
-			<a href="#" class="pause mode-bg" title="暂停"></a>
-			<a href="#" class="next mode-bg" title="下一曲"></a>
-			<span style="float:left; margin-left:5px; margin-right:3px; display:inline;">
-				<a href="#" class="random-mode random-mode-select mode-bg"  title="随机播放"></a>
-				<a href="#" class="order-mode mode-bg"  title="列表循环"></a>
-				<a href="#" class="single-mode mode-bg"  title="单曲循环"></a>
-			</span>
-			<a href="#" class="download bg" id="download" title="下载舞曲">下载</a>
-		</div>
-		<div class="seprator bg"></div>
-		<div class="info">
-			<div class="song-name">欢迎使用站长素材</div><div class="time" id="playtime">00:00</div><div class="s" >/</div><div class="time" id="totaltime">00:00</div>
-			<div class="tracks bg">
-				<div class="download-bar bg">
-					<div class="l bg">l</div>
-					<div class="r bg">r</div>
-				</div>
-				<div class="seek-bar bg">
-					<div class="l bg"></div>
-					<div class="r bg"></div>
-					<div class="point bg"></div>
-				</div>
-			</div>
-		</div>
-		<div class="seprator bg"></div>
-		<div class="volumn">
-			<a class="mute mode-bg"></a>
-			<a class="unmute mode-bg"></a>
-			<div class="line bg">
-				<div class="tracks" id="volumn">
-					<div class="volumn-bar bg">
-						<div class="l bg"></div>
-						<div class="r bg"></div>
-						<div class="point bg"></div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/movie.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/movie.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《影视金曲榜》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a> 
+ 			</div>
+ 		<div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/fengtm.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/fengtm.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《冯提莫300首》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a> 
+ 			</div>
+		<div class="col-12 col-md-6 col-lg-4"> 
+ 				<a href="./html/Music/dys.html" target="_blank" class="index-anchor"> 
+ 					<div class="card"> 
+ 						<div class="image"> 
+ 							<img height="220" src="./images/music/dys.jpg" alt=""> 
+ 							<div class="card-body" align="center"> 
+ 								<h3 class="panel-title font-weight-bold">《德云社相声》</h3> 
+ 								
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</a> 
+ 			</div>
+
+
+   </div> 
+  </div> 
+	
+<!-- 这里是相册列表 ---->
+	
+
+<table border='0' align='center' cellpadding='5' cellspacing='0' width='100%'>
+<tr>
+<td height='23' align='center'></td>
+</tr>
+</table>
+
+
+<!-- Main Content -->
+<div class="container">
+	<div class="row">
+        
+</div> 
 	</div>
-	<div class="player-r bg"></div>
-</div>
-<script language="javascript" type="text/javascript" src="js/f.js"></script>
-<script language="javascript" type="text/javascript" src="js/data.js"></script>
-<script language="javascript" type="text/javascript" src="js/jquery.min.js"></script>
-<script language="javascript" type="text/javascript" src="js/jquery.jplayer.min.js"></script>
-<script language="javascript" type="text/javascript" src="js/main.js"></script>
-</div>
-<!-- 代码 结束 -->
-	</body>
 
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright @ 听松阁 2021
+                    <br>
+                    Theme on <a href="https://github.com/">GitHub</a> | Power by <a href="http://www.660000.xyz">听松阁</a>
+                    
+                    <br>
+                    <iframe name="top" src="./images/appleutf8/ad.html" align="MIDDLE" width="728" height="90" marginwidth="0" marginheight="0" frameborder="0" scrolling="no">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+</div>
+</body>
 </html>
