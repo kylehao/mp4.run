@@ -247,7 +247,7 @@
 {title:"黄安-新鸳鸯蝴蝶梦",artist: "",album:" ",cover:"img/1.jpg",mp3:"https://music.asia.ga/musicstukust/音乐视听/精选/黄安-新鸳鸯蝴蝶梦.mp3",},
 {title:"黄安-样样红",artist: "",album:" ",cover:"img/1.jpg",mp3:"https://music.asia.ga/musicstukust/音乐视听/精选/黄安-样样红.mp3",},
 {title:"黄磊-我想我是海",artist: "",album:" ",cover:"img/1.jpg",mp3:"https://music.asia.ga/musicstukust/音乐视听/精选/黄磊-我想我是海.mp3",},
-{title:"黄龄、T?ng Duy Tan-叹",artist: "",album:" ",cover:"img/1.jpg",mp3:"https://music.asia.ga/musicstukust/音乐视听/精选/黄龄、T?ng Duy Tan-叹.mp3",},
+{title:"黄龄、Tang Duy Tan-叹",artist: "",album:" ",cover:"img/1.jpg",mp3:"https://music.asia.ga/musicstukust/音乐视听/精选/黄龄、Tang Duy Tan-叹.mp3",},
 {title:"黄品源-海浪",artist: "",album:" ",cover:"img/1.jpg",mp3:"https://music.asia.ga/musicstukust/音乐视听/精选/黄品源-海浪.mp3",},
 {title:"黄品源-你怎么舍得我难过",artist: "",album:" ",cover:"img/1.jpg",mp3:"https://music.asia.ga/musicstukust/音乐视听/精选/黄品源-你怎么舍得我难过.mp3",},
 {title:"黄绮珊-剪爱(Live)",artist: "",album:" ",cover:"img/1.jpg",mp3:"https://music.asia.ga/musicstukust/音乐视听/精选/黄绮珊-剪爱(Live).mp3",},
